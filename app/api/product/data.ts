@@ -1,4 +1,4 @@
-import { ProductCard } from "@/app/types";
+import { category, ProductCard, ProductSize } from "@/app/types";
 import image from "@/public/image/Frame 32.png";
 
 export const product: ProductCard[] = [
@@ -10,8 +10,8 @@ export const product: ProductCard[] = [
     _id: "aec37264-44e3-4168-b19a-71e79b1f3d1b",
     description:
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-      color: ["#314F4A", "#31344F", "#4F4631"],
-      size: [
+    color: ["#314F4A", "#31344F", "#4F4631"],
+    size: [
       {
         id: "1234",
         name: "small",
@@ -89,8 +89,8 @@ export const product: ProductCard[] = [
     description:
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
 
-      color: ["#314F4A", "#31344F", "#4F4631"],
-      size: [
+    color: ["#314F4A", "#31344F", "#4F4631"],
+    size: [
       {
         id: "1234",
         name: "small",
@@ -152,4 +152,33 @@ export const product: ProductCard[] = [
       { alt: "image", id: "colection-3", src: image as any },
     ],
   },
+];
+export const Category: category[] = [
+  { id: "cat-1", name: "clothes" },
+  { id: "cat-2", name: "T-shirts" },
+  { id: "cat-3", name: "Jeans" },
+  { id: "cat-4", name: "glass" },
+  { id: "cat-5", name: "shoes" },
+];
+export const Colors: string[] = [
+  "#00C12B",
+  "#F50606",
+  "#F5DD06",
+  "#F57906",
+  "#06CAF5",
+  "#063AF5",
+  "#7D06F5",
+  "#F506A4",
+  "#FFFFFF",
+  "#000000",
+];
+export const Sizes: ProductSize[] = [
+  { id: "size-1", name: "XX-Small" },
+  { id: "size-2", name: "X-Small" },
+  { id: "size-3", name: "Small" },
+  { id: "size-4", name: "Medium" },
+  { id: "size-5", name: "Large" },
+  { id: "size-6", name: "X-Large" },
+  { id: "size-7", name: "XX-Large" },
+  { id: "size-8", name: "3X-Large" },
 ];

@@ -43,6 +43,7 @@ export type category = {
   name: string;
   id: string;
 };
+
 export type ColectionImage = {
   src: string;
   alt: string;

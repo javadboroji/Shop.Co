@@ -11,11 +11,11 @@ function cart() {
       <MainComponentWrap>
         <div className="container mx-auto">
           <SectionTitle text="Your Cart" />
-          <div className="flex justify-between py-4">
-            <div className="w-[60%]">
+          <div className="flex flex-col lg:flex-row justify-between py-4">
+            <div className="lg:w-[60%] my-2">
               <CartProducts />
             </div>
-            <div className="w-[39%]">
+            <div className="lg:w-[39%] my-2">
               <OrderSummury/>
             </div>
           </div>

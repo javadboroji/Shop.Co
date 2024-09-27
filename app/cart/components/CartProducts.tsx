@@ -26,7 +26,7 @@ function CartProducts() {
             key={product._id}
             className="flex p-3 border-b-[1px] border-gray-100"
           >
-            <div className="lg:w-[20%]">
+            <div className="lg:w-[20%] w-1/3">
               <Image src={product.image} alt="product" className="rounded-xl" />
             </div>
             <div className="flex-1 flex flex-col justify-between px-4">
@@ -49,7 +49,7 @@ function CartProducts() {
               </div>
               <div className="flex items-center justify-between">
                 <span className="font-bold">${product.price}</span>
-                <div className=" flex items-center justify-between bg-ec-gray rounded-full w-[30%] lg:w-[20%]">
+                <div className=" flex items-center justify-between bg-ec-gray rounded-full w-[40%] lg:w-[20%]">
                   <button
                     onClick={() =>
                       changeCount(

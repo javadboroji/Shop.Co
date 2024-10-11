@@ -8,7 +8,7 @@ const getNewProduct = async () => {
   const params: FetchDataArg = {
     url: `${process.env.BASE_URL}/api/product/topSell`,
     method: "get",
-    cache:"force-cache"
+    cache: "force-cache",
   };
   const data = await fetchData(params);
   return data.data;
@@ -30,7 +30,10 @@ async function TopSell() {
                 discountPercentage={product.discountPercentage}
                 discountPrice={product.discountPrice}
                 image={product.image}
-              
+                _id={product._id}
+                color={product.color}
+                category={product.category}
+                size={product.size}
               />
             </div>
           );

@@ -14,8 +14,8 @@ const ProductsCard: React.FC<ProductCard> = ({
 }) => {
   return (
     <div className="flex flex-col  m-4">
-      <div className="aspect-auto lg:aspect-video">
-        <Image className="rounded-[1rem] w-full h-full" src={image} alt="image" />
+      <div className="aspect-auto min-h-[16rem] lg:aspect-video">
+        <Image className="rounded-[1rem] w-full h-full object-fill" src={image} alt="image" />
       </div>
       <Link href={`/product/${_id}`}>
         <p className="font-bold py-2">{title}</p>

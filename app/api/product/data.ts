@@ -1,5 +1,13 @@
 import { category, ProductCard, ProductSize } from "@/app/types";
 import image from "@/public/image/Frame 32.png";
+import image2 from "@/public/image/glass1.jpg";
+import image2i from "@/public/image/glass2.jpg";
+import image2ii from "@/public/image/glass3.jpg";
+import image3 from "@/public/image/w1.jpg";
+import image3i from "@/public/image/w2.jpg";
+import image4 from"@/public/image/cloth1.jpg";
+import image4i from"@/public/image/cloth2.jpg"
+import image4ii from"@/public/image/cloth3.jpg"
 
 export const product: ProductCard[] = [
   {
@@ -24,34 +32,34 @@ export const product: ProductCard[] = [
     ],
   },
   {
-    image: image as any,
-    price: 200,
-    title: "CHECKERED SHIRT",
-    rating: 3,
-    discountPercentage: 5,
+    image: image2 as any,
+    price: 500,
+    title: "Ray-Ban",
+    rating: 4,
+    discountPercentage: 0,
     description:
-      "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-    discountPrice: 10,
+      "Sugar and spice. This contoured D-frame look from Ray-Ban has plenty of appeal, with unique metal rivet detail at the wingtips, a molded saddle bridge, integrated nose pads, and contoured arms for comfort.",
+    discountPrice: 0,
     _id: "fe65b8ee-4c07-44df-abad-9839cba7f488",
-    color: ["#314F4A", "#31344F", "#4F4631"],
+    color: ["#063AF5", "#31344F", "#4F4631"],
     size: [
       { id: "size-3", name: "Small" },
       { id: "size-4", name: "Medium" },
       { id: "size-5", name: "Large" },
     ],
     comments: [],
-    category: { id: "cat", name: "clothes" },
+    category: { id: "cat-4", name: "glass" },
     ColectionImage: [
-      { alt: "image", id: "colection-1", src: image as any },
-      { alt: "image", id: "colection-2", src: image as any },
-      { alt: "image", id: "colection-3", src: image as any },
+      { alt: "image", id: "colection-1", src: image2 as any },
+      { alt: "image", id: "colection-2", src: image2i as any },
+      { alt: "image", id: "colection-3", src: image2ii as any },
     ],
   },
   {
-    image: image as any,
+    image: image3 as any,
     price: 500,
-    title: "SLEEVE STRIPED T-SHIRT",
-    rating: 1,
+    title: "Sandal",
+    rating: 2,
     discountPercentage: 20,
     discountPrice: 100,
     _id: "d69c66a0-5cef-473b-b429-7caf585b9cea",
@@ -59,35 +67,41 @@ export const product: ProductCard[] = [
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
 
     color: ["#314F4A", "#31344F", "#4F4631"],
-    size: [{ id: "size-6", name: "X-Large" }],
+    size: [
+      { id: "size-6", name: "41" },
+      { id: "size-6", name: "39" },
+    ],
     comments: [],
-    category: { id: "cat", name: "clothes" },
+    category: { id: "cat-5", name: "shoes" },
     ColectionImage: [
-      { alt: "image", id: "colection-1", src: image as any },
-      { alt: "image", id: "colection-2", src: image as any },
-      { alt: "image", id: "colection-3", src: image as any },
+      { alt: "image", id: "colection-1", src: image3 as any },
+      { alt: "image", id: "colection-2", src: image3i as any },
+      { alt: "image", id: "colection-3", src: image3 as any },
     ],
   },
   {
-    image: image as any,
-    price: 180,
-    title: "CHECKERED SHIRT",
-    rating: 4,
+    image: image4 as any,
+    price: 480,
+    title: "Canva dress",
+    rating: 3,
     _id: "7b531040-f26b-4f5d-969f-f9a8d3b45f04",
     description:
-      "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "Our customizable Canva dress lets you design the perfect outfit. Choose from a variety of fabrics, styles, and patterns to create a one-of-a-kind piece.",
 
-    color: ["#314F4A", "#31344F", "#4F4631", "#000000","#FFFFFF"],
+    color: ["#314F4A", "#31344F", "#4F4631", "#000000", "#FFFFFF"],
     size: [
       { id: "size-3", name: "Small" },
       { id: "size-5", name: "Large" },
+      { id: "size-6", name: "X-Large" },
+      { id: "size-7", name: "XX-Large" },
+      { id: "size-8", name: "3X-Large" },
     ],
     comments: [],
-    category: { id: "cat", name: "clothes" },
+    category: { id: "cat-1", name: "clothes" },
     ColectionImage: [
-      { alt: "image", id: "colection-1", src: image as any },
-      { alt: "image", id: "colection-2", src: image as any },
-      { alt: "image", id: "colection-3", src: image as any },
+      { alt: "image", id: "colection-1", src: image4 as any },
+      { alt: "image", id: "colection-2", src: image4i as any },
+      { alt: "image", id: "colection-3", src: image4ii as any },
     ],
   },
 ];

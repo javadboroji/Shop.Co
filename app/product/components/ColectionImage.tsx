@@ -1,8 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import image from "@/public/image/image 14.png";
-import image1 from "@/public/image/image 13.png";
-import image2 from "@/public/image/image 12.png";
 import Image from "next/image";
 import type { ColectionImage } from "@/app/types";
 interface IColectionImage {
@@ -35,7 +32,7 @@ const ColectionImage: React.FC<IColectionImage> = ({ data }) => {
           );
         })}
       </div>
-      <div className="flex flex-1 m-4 bg-ec-gray order-1 lg:order-2">
+      <div className="flex flex-1 m-4 bg-ec-gray order-1 lg:order-2 max-h-[25rem]">
         {imagePreview && (
           <Image
             src={imagePreview.src}

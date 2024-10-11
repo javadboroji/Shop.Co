@@ -4,7 +4,7 @@ import MainComponentWrap from "../components/Local/MainComponentWrap";
 import SectionTitle from "../components/Local/SectionTitle";
 import CartProducts from "./components/CartProducts";
 import OrderSummury from "./components/OrderSummury";
-
+export const dynamic = 'force-dynamic'
 function cart() {
   return (
     <EccomerceLayout>

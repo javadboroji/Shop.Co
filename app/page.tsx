@@ -9,7 +9,7 @@ import Banner from "./Home/Components/Banner";
 import TopSell from "./Home/Components/TopSell";
 import Brands from "./Home/Components/Brands";
 import Category from "./Home/Components/Category";
-
+export const dynamic = 'force-dynamic'
 export default function Home() {
   return (
     <>

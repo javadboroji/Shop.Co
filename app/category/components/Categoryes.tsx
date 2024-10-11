@@ -6,7 +6,8 @@ import React, { useEffect, useState } from "react";
 
 function Categoryes() {
   const [categoryes, setCategoryes] = useState<category[] | []>([]);
-  const{setFilterCat }= useProductFilter()
+  const [categoryActive, setCategoryActive] = useState<category | null>(null);
+  const { setFilterCat } = useProductFilter();
   const getCategoryes = async () => {
     const params: FetchDataArg = {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/product/getCategory`,
@@ -17,19 +18,28 @@ function Categoryes() {
     setCategoryes(data.data);
   };
 
-  const categoreyHandler=(category:category)=>{
-    
+  const categoreyHandler = (category: category) => {
     setFilterCat(category);
-  }
+    setCategoryActive(category);
+  };
   useEffect(() => {
     getCategoryes();
   }, []);
 
-  
   return (
-    <div className="flex flex-col justify-between px-2">
+    <div className="flex flex-col  px-2 w-full">
       {categoryes?.map((cat) => {
-        return <button className="py-2" key={cat.id} onClick={()=>categoreyHandler(cat)}>{cat.name}</button>;
+        return (
+          <button
+            className={`p-2 rounded-xl text-left ${
+              categoryActive?.id === cat.id ? "bg-gray-300" : "bg-transparent"
+            }`}
+            key={cat.id}
+            onClick={() => categoreyHandler(cat)}
+          >
+            {cat.name}
+          </button>
+        );
       })}
     </div>
   );

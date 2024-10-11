@@ -12,26 +12,8 @@ export const product: ProductCard[] = [
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
     color: ["#314F4A", "#31344F", "#4F4631"],
     size: [
-      {
-        id: "1234",
-        name: "small",
-      },
-      {
-        id: "12345",
-        name: "Medium",
-      },
-      {
-        id: "123456",
-        name: "Large",
-      },
-      {
-        id: "12345678",
-        name: "X-Large",
-      },
-      {
-        id: "12345679",
-        name: "XX-Large",
-      },
+      { id: "size-5", name: "Large" },
+      { id: "size-6", name: "X-Large" },
     ],
     comments: [],
     category: { id: "cat", name: "clothes" },
@@ -53,22 +35,9 @@ export const product: ProductCard[] = [
     _id: "fe65b8ee-4c07-44df-abad-9839cba7f488",
     color: ["#314F4A", "#31344F", "#4F4631"],
     size: [
-      {
-        id: "1234",
-        name: "small",
-      },
-      {
-        id: "12345",
-        name: "Medium",
-      },
-      {
-        id: "123456",
-        name: "Large",
-      },
-      {
-        id: "12345678",
-        name: "X-Large",
-      },
+      { id: "size-3", name: "Small" },
+      { id: "size-4", name: "Medium" },
+      { id: "size-5", name: "Large" },
     ],
     comments: [],
     category: { id: "cat", name: "clothes" },
@@ -90,24 +59,7 @@ export const product: ProductCard[] = [
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
 
     color: ["#314F4A", "#31344F", "#4F4631"],
-    size: [
-      {
-        id: "1234",
-        name: "small",
-      },
-      {
-        id: "12345",
-        name: "Medium",
-      },
-      {
-        id: "123456",
-        name: "Large",
-      },
-      {
-        id: "12345678",
-        name: "X-Large",
-      },
-    ],
+    size: [{ id: "size-6", name: "X-Large" }],
     comments: [],
     category: { id: "cat", name: "clothes" },
     ColectionImage: [
@@ -125,24 +77,10 @@ export const product: ProductCard[] = [
     description:
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
 
-    color: ["#314F4A", "#31344F", "#4F4631"],
+    color: ["#314F4A", "#31344F", "#4F4631", "#000000","#FFFFFF"],
     size: [
-      {
-        id: "1234",
-        name: "small",
-      },
-      {
-        id: "12345",
-        name: "Medium",
-      },
-      {
-        id: "123456",
-        name: "Large",
-      },
-      {
-        id: "12345678",
-        name: "X-Large",
-      },
+      { id: "size-3", name: "Small" },
+      { id: "size-5", name: "Large" },
     ],
     comments: [],
     category: { id: "cat", name: "clothes" },

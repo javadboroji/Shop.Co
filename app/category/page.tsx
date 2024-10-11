@@ -7,6 +7,7 @@ import Price from "./components/Price";
 import Colors from "./components/Colors";
 import Size from "./components/Size";
 import FilterApply from "./components/FilterApply";
+import ProductResult from "./components/ProductResult";
 
 function category() {
   return (
@@ -35,7 +36,9 @@ function category() {
                 <FilterApply />
               </div>
             </div>
-            <div className="flex flex-1"></div>
+            <div className="flex flex-1">
+              <ProductResult />
+            </div>
           </div>
         </div>
       </MainComponentWrap>

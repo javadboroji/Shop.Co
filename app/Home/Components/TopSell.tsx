@@ -8,6 +8,7 @@ const getNewProduct = async () => {
   const params: FetchDataArg = {
     url: `${process.env.BASE_URL}/api/product/topSell`,
     method: "get",
+    cache:"force-cache"
   };
   const data = await fetchData(params);
   return data.data;
@@ -21,7 +22,7 @@ async function TopSell() {
       <div className="flex-col flex md:flex-row flex-wrap">
         {product?.map((product: ProductCard) => {
           return (
-            <div className="w-full md:w-1/2 lg:w-1/4">
+            <div key={product._id} className="w-full md:w-1/2 lg:w-1/4">
               <ProductsCard
                 title={product.title}
                 price={product.price}
@@ -29,6 +30,7 @@ async function TopSell() {
                 discountPercentage={product.discountPercentage}
                 discountPrice={product.discountPrice}
                 image={product.image}
+              
               />
             </div>
           );

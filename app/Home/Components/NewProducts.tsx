@@ -1,7 +1,6 @@
 import ProductsCard from "@/app/components/Local/ProductsCard";
 import SectionTitle from "@/app/components/Local/SectionTitle";
 import React from "react";
-import image from "@/public/image/Frame 32.png";
 import { fetchData, FetchDataArg } from "@/lib/fetchData";
 import type { ProductCard } from "@/app/types";
 import CButton from "@/app/components/Local/CButton";
@@ -25,7 +24,7 @@ async function NewProducts() {
       <div className="flex-col flex md:flex-row flex-wrap">
         {product?.map((product: ProductCard) => {
           return (
-            <div className="w-full md:w-1/2 lg:w-1/4">
+            <div key={product._id} className="w-full md:w-1/2 lg:w-1/4">
               <ProductsCard
                 title={product.title}
                 price={product.price}

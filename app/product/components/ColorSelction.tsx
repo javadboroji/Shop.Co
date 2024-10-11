@@ -25,6 +25,7 @@ const ColorSelction: React.FC<IColorSelction> = ({ active, colors }) => {
         {" "}
         {colors?.map((color, index) => (
           <button
+          key={`btn-${index}`}
             className={`w-7 h-7 rounded-full flex justify-center items-center  mx-2`}
             style={{ backgroundColor: color }}
             onClick={() => changeColor(index,color)}

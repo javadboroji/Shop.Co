@@ -59,7 +59,7 @@ function ProductResult() {
         {productFilters.length > 0 ? (
           productFilters.map((product: ProductCard) => {
             return (
-              <div className="w-full md:w-1/2 lg:w-1/4">
+              <div key={product._id} className="w-full md:w-1/2 lg:w-1/4">
                 <ProductsCard
                   title={product.title}
                   price={product.price}

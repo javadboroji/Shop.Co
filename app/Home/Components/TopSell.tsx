@@ -6,7 +6,7 @@ import { fetchData, FetchDataArg } from "@/lib/fetchData";
 import React from "react";
 const getNewProduct = async () => {
   const params: FetchDataArg = {
-    url: `/api/product/topSell`,
+    url: `${process.env.BASE_URL}/api/product/topSell`,
     method: "get",
     cache: "force-cache",
   };

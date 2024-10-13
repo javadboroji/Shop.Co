@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        BASE_URL:"http://localhost:3000"
+        BASE_URL:"https://shop-d2aep052c-javads-projects-8d218047.vercel.ap"
       },  
 };
 

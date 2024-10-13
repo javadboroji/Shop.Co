@@ -7,14 +7,16 @@ import CButton from "@/app/components/Local/CButton";
 
 const getNewProduct = async () => {
   const params: FetchDataArg = {
-    url: `${process.env.BASE_URL}/api/product/getNewProduct`,
+    url: `/api/product/getNewProduct`,
     method: "get",
     cache:"no-store"  
   };
   const data = await fetchData(params);
-  return data.data;
+  return data?.data;
 };
 async function NewProducts() {
+  console.log(process.env.BASE_URL);
+  
   const product = await getNewProduct();
 
   return (

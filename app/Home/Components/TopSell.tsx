@@ -6,12 +6,12 @@ import { fetchData, FetchDataArg } from "@/lib/fetchData";
 import React from "react";
 const getNewProduct = async () => {
   const params: FetchDataArg = {
-    url: `${process.env.BASE_URL}/api/product/topSell`,
+    url: `/api/product/topSell`,
     method: "get",
     cache: "force-cache",
   };
   const data = await fetchData(params);
-  return data.data;
+  return data?.data;
 };
 async function TopSell() {
   const product = await getNewProduct();

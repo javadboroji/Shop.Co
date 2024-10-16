@@ -9,7 +9,7 @@ function FilterApply() {
   const { setProductFilter } = useProductFilterResult();
   const applyFilter = async () => {
     const params: FetchDataArg = {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/product/productFilter`,
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/productFilter`,
       method: "post",
       cache: "no-store",
       body: filters,

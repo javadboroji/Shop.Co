@@ -21,8 +21,6 @@ async function NewProducts() {
   return (
     <div>
       <SectionTitle text="NEW ARRIVALS" />
-      {process.env.BASE_URL}
-
       <div className="flex-col flex md:flex-row flex-wrap">
         {product?.map((product: ProductCard) => {
           return (

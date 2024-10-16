@@ -10,7 +10,7 @@ function Colors() {
   const { setFilterColor } = useProductFilter();
   const getColors = async () => {
     const params: FetchDataArg = {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/product/getColors`,
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/getColors`,
       method: "get",
       cache: "force-cache",
     };

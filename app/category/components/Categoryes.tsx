@@ -10,7 +10,7 @@ function Categoryes() {
   const { setFilterCat } = useProductFilter();
   const getCategoryes = async () => {
     const params: FetchDataArg = {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/product/getCategory`,
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/getCategory`,
       method: "get",
       cache: "force-cache",
     };

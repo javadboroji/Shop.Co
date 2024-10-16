@@ -13,7 +13,7 @@ function Comments() {
   const [comments, setComments] = useState([]);
   const getLastComments = async () => {
     const params: FetchDataArg = {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/comment/getLastComments`,
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/comment/getLastComments`,
       method: "get",
       cache: "no-store",
     };

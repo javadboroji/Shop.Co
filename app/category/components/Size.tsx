@@ -16,7 +16,7 @@ function Size() {
 
   const getSizes = async () => {
     const params: FetchDataArg = {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/product/getSize`,
+      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/getSize`,
       method: "get",
       cache: "force-cache",
     };

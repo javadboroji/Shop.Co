@@ -9,17 +9,18 @@ const getNewProduct = async () => {
   const params: FetchDataArg = {
     url: `${process.env.BASE_URL}/api/product/getNewProduct`,
     method: "get",
-    cache:"no-store"  
+    cache: "no-store",
   };
   const data = await fetchData(params);
   return data?.data;
 };
-async function NewProducts() {  
+async function NewProducts() {
   const product = await getNewProduct();
 
   return (
     <div>
       <SectionTitle text="NEW ARRIVALS" />
+      {process.env.BASE_URL}
 
       <div className="flex-col flex md:flex-row flex-wrap">
         {product?.map((product: ProductCard) => {
@@ -40,7 +41,7 @@ async function NewProducts() {
           );
         })}
       </div>
-      <CButton title="View All"/>
+      <CButton title="View All" />
     </div>
   );
 }

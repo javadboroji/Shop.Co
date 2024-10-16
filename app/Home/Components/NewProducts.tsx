@@ -7,7 +7,7 @@ import CButton from "@/app/components/Local/CButton";
 
 const getNewProduct = async () => {
   const params: FetchDataArg = {
-    url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/getNewProduct`,
+    url: `${process.env.BASE_URL}/api/product/getNewProduct`,
     method: "get",
     cache:"no-store"  
   };
@@ -24,7 +24,6 @@ async function NewProducts() {
       <SectionTitle text="NEW ARRIVALS" />
 
       <div className="flex-col flex md:flex-row flex-wrap">
-        {process.env.NEXT_PUBLIC_VERCEL_URL}
         {product?.map((product: ProductCard) => {
           return (
             <div key={product._id} className="w-full md:w-1/2 lg:w-1/4">

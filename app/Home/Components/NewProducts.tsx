@@ -4,10 +4,10 @@ import React from "react";
 import { fetchData, FetchDataArg } from "@/lib/fetchData";
 import type { ProductCard } from "@/app/types";
 import CButton from "@/app/components/Local/CButton";
-
+import getConfig from 'next/config';
 const getNewProduct = async () => {
   const params: FetchDataArg = {
-    url: `${process.env.BASE_URL}/api/product/getNewProduct`,
+    url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/getNewProduct`,
     method: "get",
     cache: "no-store",
   };
@@ -17,6 +17,7 @@ const getNewProduct = async () => {
 async function NewProducts() {
   const product = await getNewProduct();
 
+  
   return (
     <div>
       <SectionTitle text="NEW ARRIVALS" />

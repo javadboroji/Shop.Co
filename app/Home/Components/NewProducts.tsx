@@ -14,9 +14,7 @@ const getNewProduct = async () => {
   const data = await fetchData(params);
   return data?.data;
 };
-async function NewProducts() {
-  console.log(process.env.NEXT_PUBLIC_VERCEL_URLL);
-  
+async function NewProducts() {  
   const product = await getNewProduct();
 
   return (

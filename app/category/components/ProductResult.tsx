@@ -41,8 +41,8 @@ function ProductResult() {
     );
   } else {
     return (
-      <div className="container flex mx-auto flex-col">
-        <div className="w-full flex flex-wrap items-center bg-gray-300 mx-4 p-3 rounded-xl">
+      <div className="container flex mx-0 lg:mx-auto flex-col mt-16 lg:mt-0">
+        <div className="lg:w-full w-[95%] flex flex-wrap items-center bg-gray-300 lg:mx-4 p-3 rounded-xl">
           <span className="bg-black text-white p-2 rounded-lg mx-2">
             size: {filters?.size?.name}
           </span>

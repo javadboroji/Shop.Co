@@ -8,34 +8,15 @@ import Colors from "./components/Colors";
 import Size from "./components/Size";
 import FilterApply from "./components/FilterApply";
 import ProductResult from "./components/ProductResult";
+import FilterSideBar from "./components/FilterSideBar";
 
 function category() {
   return (
     <EccomerceLayout>
       <MainComponentWrap>
         <div className="container mx-auto my-4">
-          <div className="flex">
-            <div className="lg:w-[20%] border-[1px] rounded-xl p-3">
-              <div className="flex items-center justify-between border-b-2 py-3 border-gray-100">
-                <span> Filters</span>
-                <FiFilter />
-              </div>
-              <div className="flex items-center justify-between border-b-2 py-3 border-gray-100">
-                <Categoryes />
-              </div>
-              <div className="flex items-center justify-between border-b-2 py-3 border-gray-100">
-                <Price />
-              </div>
-              <div className="flex items-center justify-between border-b-2 py-3 border-gray-100">
-                <Colors />
-              </div>
-              <div className="flex items-center justify-between  border-b-2 py-3 border-gray-100">
-                <Size />
-              </div>
-              <div className="flex items-center justify-between   py-3 border-gray-100">
-                <FilterApply />
-              </div>
-            </div>
+          <div className="flex relative">
+            <FilterSideBar />
             <div className="flex flex-1">
               <ProductResult />
             </div>

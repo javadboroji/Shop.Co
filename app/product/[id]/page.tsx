@@ -8,7 +8,7 @@ import { ProductCard } from "@/app/types";
 
 const getNewProduct = async (id: string) => {
   const params: FetchDataArg = {
-    url: `${process.env.BASE_URL}/api/product/singleProduct`,
+    url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/singleProduct`,
     method: "post",
     cache: "no-store",
     body: id,

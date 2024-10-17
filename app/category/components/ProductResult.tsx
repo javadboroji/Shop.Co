@@ -44,36 +44,42 @@ function ProductResult() {
       <div className="container flex mx-auto flex-col">
         <div className="w-full flex flex-wrap items-center bg-gray-300 mx-4 p-3 rounded-xl">
           <span className="bg-black text-white p-2 rounded-lg mx-2">
-           size: {filters?.size?.name}
+            size: {filters?.size?.name}
           </span>
           <span className="bg-black text-white p-2 rounded-lg mx-2">
-           category: {filters?.category?.name}
+            category: {filters?.category?.name}
           </span>
           <span className=" flex items-center text-white p-2 rounded-lg mx-2">
-            color:<span className="mx-2 block w-8 h-8 rounded-full" style={{ background: filters?.color }}></span>
+            color:
+            <span
+              className="mx-2 block w-8 h-8 rounded-full"
+              style={{ background: filters?.color }}
+            ></span>
           </span>
           <span className="bg-black text-white p-2 rounded-lg mx-2">
-           Price: {filters?.price[0]}$~ {filters.price[1]}$
+            Price: {filters?.price[0]}$~ {filters.price[1]}$
           </span>
         </div>
         {productFilters.length > 0 ? (
-          productFilters.map((product: ProductCard) => {
-            return (
-              <div key={product._id} className="w-full md:w-1/2 lg:w-1/4">
-                <ProductsCard
-                  title={product.title}
-                  price={product.price}
-                  rating={product.rating}
-                  discountPercentage={product.discountPercentage}
-                  discountPrice={product.discountPrice}
-                  image={product.image}
-                  _id={product._id}
-                  color={product.color}
-                  size={product.size}
-                />
-              </div>
-            );
-          })
+          <div className="flex flex-wrap">
+            {productFilters.map((product: ProductCard) => {
+              return (
+                <div key={product._id} className="w-full md:w-1/2 lg:w-1/3">
+                  <ProductsCard
+                    title={product.title}
+                    price={product.price}
+                    rating={product.rating}
+                    discountPercentage={product.discountPercentage}
+                    discountPrice={product.discountPrice}
+                    image={product.image}
+                    _id={product._id}
+                    color={product.color}
+                    size={product.size}
+                  />
+                </div>
+              );
+            })}
+          </div>
         ) : (
           <h1 className="font-bold text-center p-4"> No products were found</h1>
         )}

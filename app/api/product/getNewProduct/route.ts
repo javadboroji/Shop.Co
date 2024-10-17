@@ -4,14 +4,11 @@ import { product } from "../data";
 
 export async function GET() {
   try {
-    //await connectMongoDB();
-    //const productsData=await Products.find();
-    //console.log(productsData,'*productsData*');
-
+    const newProduct=product.slice(4)
     return NextResponse.json(
       {
         message: "",
-        data: product,
+        data: newProduct,
       },
       {
         status: 200,

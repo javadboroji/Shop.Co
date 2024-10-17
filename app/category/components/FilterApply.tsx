@@ -2,7 +2,7 @@
 import useProductFilter from "@/app/Store/ProductFilter";
 import useProductFilterResult from "@/app/Store/ProductFilterResult";
 import { fetchData, FetchDataArg } from "@/lib/fetchData";
-import React from "react";
+import React, { useEffect } from "react";
 
 function FilterApply() {
   const { filters } = useProductFilter();
@@ -15,9 +15,12 @@ function FilterApply() {
       body: filters,
     };
     const data = await fetchData(params);
-      
     setProductFilter(data.data);
   };
+  useEffect(() => {
+    applyFilter()
+  }, [])
+  
   return (
     <div className="w-full">
       <button

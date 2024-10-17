@@ -10,6 +10,7 @@ export type ProductCard = ProductInfo & {
   comments?: Comments[];
   category?: category;
   ColectionImage?: ColectionImage[];
+  saleCount?:number
 };
 export type ProductBasket={
   image: string;

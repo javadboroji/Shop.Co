@@ -5,14 +5,13 @@ import { product } from "../data";
 
 export async function GET() {
   try {
-    //await connectMongoDB();
-    //const productsData=await Products.find();
-    //console.log(productsData,'*productsData*');
-
+    const topSell=product.filter(item=>(item?.saleCount??0)>10&&item )
+    console.log(topSell);
+    
     return NextResponse.json(
       {
         message: "",
-        data: product,
+        data: topSell,
       },
       {
         status: 200,

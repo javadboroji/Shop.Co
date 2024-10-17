@@ -37,6 +37,20 @@ const lastComments = [
       "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasion",
     rating: 5,
   },
+  {
+    id: 6,
+    userName: "Alex.",
+    commentText:
+      "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasion",
+    rating: 3,
+  },
+  {
+    id: 7,
+    userName: "Wheny.",
+    commentText:
+      "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasion",
+    rating: 5,
+  },
 ];
 export async function GET() {
   try {

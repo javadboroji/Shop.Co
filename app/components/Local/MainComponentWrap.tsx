@@ -4,7 +4,7 @@ interface MainComponentWrapProps {
   }
 const MainComponentWrap:React.FC<MainComponentWrapProps>=({children})=> {
   return (
-    <div className='min-h-[35rem] mt-28'>
+    <div className='lg:min-h-[35rem] lg:mt-28'>
         {children}
     </div>
   )

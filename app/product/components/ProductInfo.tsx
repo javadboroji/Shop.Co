@@ -8,7 +8,7 @@ interface IProductInfo {
   data: ProductCard;
 }
 const ProductInfo: React.FC<IProductInfo> = ({ data }) => {
-  const ratingStar = Array.from(Array(data.rating).keys());
+  const ratingStar = Array.from(Array(data?.rating).keys());
   const unRating = 5 - ratingStar.length;
   const unRatingStar = Array.from(Array(unRating).keys());
   return (
@@ -18,7 +18,7 @@ const ProductInfo: React.FC<IProductInfo> = ({ data }) => {
         {ratingStar?.map((i) => {
           return (
             <svg
-            key={`ratingStar-${i}`}
+              key={`ratingStar-${i}`}
               className="w-4 h-4 text-yellow-300 ms-1"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const ProductInfo: React.FC<IProductInfo> = ({ data }) => {
         {unRatingStar?.map((i) => {
           return (
             <svg
-            key={i}
+              key={i}
               className="w-4 h-4 ms-1 text-gray-300 dark:text-gray-500"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"

@@ -36,9 +36,9 @@ function Comments() {
           speed={3000}
           parallax={true}
           modules={[Autoplay, Navigation]}
-          loop={true}
+          loop={false}
           autoplay={{
-            delay: 3500,
+            delay: 2500,
             disableOnInteraction: false,
           }}
           className="commentSwiper !p-4"

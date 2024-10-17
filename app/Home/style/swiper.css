@@ -41,7 +41,13 @@
   
   }
 }
+@media only screen and (max-width: 780px){
+  .mySwiper .swiper-slide {
+    height: 60dvh;
 
+    overflow: hidden;
+  }
+}
 /* Zoom in Keyframes */
 @-webkit-keyframes zoomin {
   0% {

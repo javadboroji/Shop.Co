@@ -8,13 +8,14 @@ const getNewProduct = async () => {
   const params: FetchDataArg = {
     url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/topSell`,
     method: "get",
-    cache: "force-cache",
+    cache: "no-store",
   };
   const data = await fetchData(params);
   return data?.data;
 };
 async function TopSell() {
-  const product = await getNewProduct();
+  const product = await getNewProduct();  
+  
   return (
     <div>
       <SectionTitle text="Top Selling" />

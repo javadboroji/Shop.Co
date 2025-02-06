@@ -7,7 +7,7 @@ import CButton from "@/app/components/Local/CButton";
 import getConfig from 'next/config';
 const getNewProduct = async () => {
   const params: FetchDataArg = {
-    url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/getNewProduct`,
+    url: `${process.env.BASE_URL}/api/product/getNewProduct`,
     method: "get",
     cache: "no-store",
   };
@@ -15,6 +15,7 @@ const getNewProduct = async () => {
   return data?.data;
 };
 async function NewProducts() {
+  
   const product = await getNewProduct();
 
   

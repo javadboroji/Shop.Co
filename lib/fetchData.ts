@@ -23,7 +23,7 @@ export const fetchData = async ({
 
     return response.json();
   } catch (error) {
-    console.log(error);
+     return{error:error}
     
   }
 };

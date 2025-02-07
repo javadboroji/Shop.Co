@@ -9,9 +9,11 @@ import BasButton from "../components/Local/button/Bas.Button";
 import Link from "next/link";
 import SocilaLogin from "./Components/SocialLogin/SocilaLogin";
 import LoginForm from "./Components/LoginForm/LoginForm";
+import { ToastContainer } from "react-toastify";
 
 function page() {
   return (
+    <>
     <div className="flex mt-16 flex-col w-[35%] mx-auto rounded-3xl p-8  form-box">
       <Link href={"/"}>
         {" "}
@@ -27,6 +29,8 @@ function page() {
         </Link>
       </div>
     </div>
+      <ToastContainer />
+    </>
   );
 }
 

@@ -20,10 +20,8 @@ export const fetchData = async ({
       cache: cache,
       body: JSON.stringify(body),
     });
-
     return response.json();
-  } catch (error) {
-     return{error:error}
-    
+  } catch (error) {    
+    return error;
   }
 };

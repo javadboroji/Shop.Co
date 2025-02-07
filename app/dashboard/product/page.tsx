@@ -1,10 +1,11 @@
 import React from "react";
 import DashboardLayout from "../DashboardLayout";
+import ProductList from "./components/ProductList";
 
 function page() {
   return (
     <DashboardLayout>
-      <div>Products</div>
+      <ProductList/>
     </DashboardLayout>
   );
 }

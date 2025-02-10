@@ -1,28 +1,17 @@
+"use client";
 import { DataTable } from "@/app/components/Local/DataTable/DataTable";
-import React from "react";
-import { ProductListColumns } from "./ProductListColumns";
+import React, { useState } from "react";
 import { fetchData, FetchDataArg } from "@/lib/fetchData";
+import useProductColumns from "./useProductColumns";
+import ViewProduct from "./ViewProduct";
 
-async function ProductList() {
-  const getAllProducts = async () => {
-    const filters = {
-      category: null,
-      color: "",
-      price: [],
-      size: null,
-    };
-    const params: FetchDataArg = {
-      url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/product/productFilter`,
-      method: "post",
-      cache: "no-store",
-      body: filters,
-    };
-    return await fetchData(params);
-  };
-  const data =await getAllProducts();
+function ProductList() {
+  const [open, setOpen] = useState(false);
+  const { columns, data } = useProductColumns(setOpen);
   return (
     <div className="w-full">
-      <DataTable columns={ProductListColumns} data={data?.data??[]} />
+      <DataTable columns={columns} data={data ?? []} />
+      <ViewProduct open={open} setOpen={setOpen} />
     </div>
   );
 }
